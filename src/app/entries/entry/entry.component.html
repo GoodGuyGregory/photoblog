@@ -3,3 +3,14 @@
     <img src="{{photo}}" alt="">
     <figcaption>{{description}}</figcaption>
 </figure>
+<div class="actions">
+    <button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button>
+    <button type="button" (click)="showComments = !showComments">Comments ({{comments.length}})</button>
+</div>
+<!--  if the ngIf is true show comments -->
+<div class="comments" *ngIf="showComments">
+    <!-- iterates over the comments of the images -->
+    <div class="comment" *ngFor="let comment of comments">
+        <p><strong>{{comment.name}}</strong>{{comment.comment}}</p>
+    </div>
+</div>
