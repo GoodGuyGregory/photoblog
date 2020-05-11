@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+
 
 @Component({
     // component area to mount the component to the DOM
